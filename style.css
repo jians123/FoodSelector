@@ -1,0 +1,57 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+p, #copy_right{
+  color: gray;
+  position: fixed;
+  left: 85%;
+  bottom:1%;
+  z-index: 2;
+}
+h2 {
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  color: green;
+  position: fixed;
+  left: 30%;
+  bottom:50%;
+  z-index: 2;
+}
+#bgImage {
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  filter: grayscale(20%);
+
+  width: 100%;
+  height: 100%;
+}
+
+#icon {
+  text-align: center;
+  color: green;
+  position: fixed;
+  left: 50%;
+  bottom:40%;
+  z-index: 2;
+
+  height :5%;
+  background-color: blanchedalmond; 
+  font-size: 16px;
+  border: 4px solid #4CAF50;
+} 
+
+
+
+#icon:hover {background-color: yellowgreen}
+
+#icon:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
