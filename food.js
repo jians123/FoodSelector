@@ -1,13 +1,13 @@
 class Food{
     constructor(_imgName){
         this.x = random(windowWidth);
-        this.y = random(-100,-2000);
+        this.y = random(-2000);
         this.alpha = 255;
         this.img = loadImage(_imgName);
         this.state = 0;
         this.fallSpeed = random(1,2);
         this.rotateSpeed = random(0.005,0.01);
-        this.label;
+        this.label = "";
         this.state = 0;
     }
 

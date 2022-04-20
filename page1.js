@@ -7,6 +7,7 @@ function preload(){
     let index = i+1;
     let path = "assets/food"+index+".png"
     foods[i] = new Food(path);
+    foods[i].state = 1;
   }
 }
 
