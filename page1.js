@@ -1,4 +1,4 @@
-/*
+
 let gameState = 0;
 let eggs = [];
 let normalFoods = [];
@@ -44,4 +44,4 @@ function draw() {
   background(255,207,131);
   normalFoods[0].draw(mouseX,mouseY);
 }
-*/
+
