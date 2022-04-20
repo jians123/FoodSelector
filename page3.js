@@ -146,7 +146,7 @@ function screenshot(){
 
 function regenerate(){
     location.reload();
-    location.href='page2.html';
+    location.href='page3.html';
 }
 
 function restart(){
