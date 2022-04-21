@@ -10,6 +10,8 @@ let state = 0;
 
 let shotButton, restartButton, regenerateButton;
 
+let ratio = 0.8;
+
 function preload(){
   //Load egg
   for(let i = 0; i < 3; i++){
@@ -18,7 +20,7 @@ function preload(){
     eggs.push(new Egg(path));
   }
   //Load vegan food
-  for(let i = 1; i < 25; i++){
+  for(let i = 1; i < 23; i++){
     let index = i;
     let path = "assets/food"+index+".png"
     foods.push(new Food(path));
@@ -36,7 +38,7 @@ function setup() {
     eggs[i].img.resize(0.2*eggs[i].img.width,0.2*eggs[i].img.height);
   }
   for(let i = 0; i < foods.length; i++){
-    foods[i].img.resize(0.2*foods[i].img.width,0.2*foods[i].img.height);
+    foods[i].img.resize(ratio*foods[i].img.width,ratio*foods[i].img.height);
   }
   setFoodLabel();
   for(let i = 0; i < 3; i++){
@@ -114,6 +116,7 @@ function mouseReleased(){
     {
         if(dist(eggs[i].x,eggs[i].y,mouseX,mouseY) < 100)
         {
+          document.getElementById('eggSound').play();
             eggs[i].state = 2;
             selectFoods[i].state = 1;
         }
@@ -128,35 +131,36 @@ function setFoodLabel(){
     foods[4].setLabel("BBQ");
     foods[5].setLabel("meat steak");
     foods[6].setLabel("waffles");
-    foods[7].setLabel("waffles");
-    foods[8].setLabel("cherry");
-    foods[9].setLabel("cherry");
-    foods[10].setLabel("fruit");
-    foods[11].setLabel("salad");
-    foods[12].setLabel("cabbage");
-    foods[13].setLabel("dragon");
-    foods[14].setLabel("milk");
-    foods[15].setLabel("avocado");
-    foods[16].setLabel("corn");
-    foods[17].setLabel("congee");
-    foods[18].setLabel("cheese");
-    foods[19].setLabel("zucchini");
-    foods[20].setLabel("broccoli");
-    foods[21].setLabel("tofu");
-    foods[22].setLabel("cake");
-    foods[23].setLabel("egg");
+    foods[7].setLabel("cherry");
+    foods[8].setLabel("fruit");
+    foods[9].setLabel("salad");
+    foods[10].setLabel("cabbage");
+    foods[11].setLabel("pitaya");
+    foods[12].setLabel("milk cereal");
+    foods[13].setLabel("avocado");
+    foods[14].setLabel("corn");
+    foods[15].setLabel("congee");
+    foods[16].setLabel("cheese");
+    foods[17].setLabel("zucchini");
+    foods[18].setLabel("broccoli");
+    foods[19].setLabel("tofu");
+    foods[20].setLabel("flatbread");
+    foods[21].setLabel("eggs");
 }
 
 function screenshot(){
-    save('myDiet.jpg');
+  document.getElementById('clickSound').play();
+  save('myDiet.jpg');
 }
 
 function regenerate(){
-    location.reload();
-    location.href='page2.html';
+  document.getElementById('clickSound').play();
+  location.reload();
+  location.href='page2.html';
 }
 
 function restart(){
-    location.reload();
-    location.href='index.html';
+  document.getElementById('clickSound').play();
+  location.reload();
+  location.href='index.html';
 }

@@ -16,12 +16,17 @@
     <audio controls autoplay>
       <source src="./assets/bgSound.mp3" type="audio/mpeg">
     </audio>
+
+    <audio id="clickSound" src="./assets/click.wav" preload="auto"></audio>
+    <audio id="eggSound" src="./assets/eggSound.wav" preload="auto"></audio>
+
+
     <script src="./page3.js"></script>
     <div>
       <h2 id = "eggMenu">Please click the eggs to generate your food:</h2>
     </div>
     <div id = "quit">
-      <a href="page1.html"><h1>Go Back</h1></a>
+      <a href="page1.html" onmousedown = "document.getElementById('clickSound').play();"><h1>Go Back</h1></a>
     </div>
     <div id="copy_right">
       <p>©copyright 2022. Sophie Jiang  <br />All rights reserved.</p>
