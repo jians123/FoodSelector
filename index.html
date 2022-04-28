@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+    <script src="./libraries/p5.js"></script>
+    <script src="./libraries/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://unpkg.com/rita@2.8.1/dist/rita.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Homepage</title>
+  </head>
+  <body>
+    <audio controls autoplay>
+      <source src="./assets/bgSound.mp3" type="audio/mpeg">
+    </audio>
+
+    <div>
+      <img id = "bgImage" src ="./assets/background.png" alt="5"/>
+    </div>
+
+    <audio id="clickSound" src="./assets/click.wav" preload="auto"></audio>
+    <div>
+      <button id = "startIcon"  onmousedown = "document.getElementById('clickSound').play();" onmouseup = "window.location.href='page1.html';">START</button>
+    </div>
+
+    <div>
+      <h2 id = "introduction">Still thinking about what to eat today?<br>
+      Let me help you decide!</h2>
+    </div>
+    
+    <div>
+      <h2 id = "foodIntroduction"></h2>
+    </div>
+
+    <div id="copy_right">
+      <p>©copyright 2022. Sophie Jiang  <br />All rights reserved.</p>
+    </div>
+  </body>
+</html>
